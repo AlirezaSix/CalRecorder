@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl" android:layout_margin="14dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.callrecorder.payamgostar.SettingsActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:orientation="vertical">
+
+    <LinearLayout android:layout_marginStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/pg_server_address" />
+
+        <EditText
+            android:id="@+id/txtServerAddress"
+            android:hint="@string/server_address_hint"
+            android:textDirection="ltr"
+            android:inputType="textUri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/line_number" />
+
+        <EditText
+            android:id="@+id/txtPhoneNumber"
+            android:inputType="phone"
+            android:hint="@string/phone_number_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/telephony_system_key" />
+
+        <EditText
+            android:id="@+id/txtTelephonyKey"
+            android:inputType="textAutoComplete"
+            android:hint="@string/hint_tskey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/extension_number" />
+
+        <EditText
+            android:id="@+id/txtExtension"
+            android:inputType="phone"
+            android:hint="@string/hint_sample_ext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/prompt_username" />
+
+        <EditText
+            android:id="@+id/txtUsername"
+            android:inputType="text"
+            android:textDirection="ltr"
+            android:hint="@string/prompt_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/prompt_password" />
+
+        <EditText
+            android:id="@+id/txtPassword"
+            android:inputType="textPassword"
+            android:hint="@string/prompt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/chkEnableRecording"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/chk_enable_recording" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/lbl_recording_source" />
+
+        <RadioGroup android:id="@+id/grpRecordingSource"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_marginStart="30dp">
+
+            <RadioButton
+                android:id="@+id/rbRecordingSourceAuto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/recording_source_auto" />
+
+            <RadioButton
+                android:id="@+id/rbRecordingSourceDefault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/recording_source_default" />
+
+            <RadioButton
+                android:id="@+id/rbRecordingSourceVoiceCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/recording_source_voiceCall"  />
+
+            <RadioButton
+                android:id="@+id/rbRecordingSourceUpLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/recording_source_uplink" />
+
+            <RadioButton
+                android:id="@+id/rbRecordingSourceDownLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/recording_source_downlink" />
+
+            <RadioButton
+                android:id="@+id/rbRecordingSourceMic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/recording_source_mic" />
+
+            <RadioButton
+                android:id="@+id/rbRecordingSourceCommunication"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/recording_source_communication" />
+
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/chkDeleteMediaAfterSync"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/chkCleanMediaFilesAfterSync" />
+
+        <Button
+            android:id="@+id/btnSaveSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save_settings" />
+
+        <Button
+            android:id="@+id/btnCleanAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_clean_all" />
+
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>
